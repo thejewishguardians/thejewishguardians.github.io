@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Jewish Guardians — Protecting Our Children</title>
+<meta name="description" content="The Jewish Guardians publicly exposes registered sex offenders from government-verified sources who operate within Jewish communities.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0F19;--surface:#121828;--card:#171E2E;--border:rgba(255,255,255,0.06);--border-light:rgba(255,255,255,0.1);--red:#DC2626;--red-glow:rgba(220,38,38,0.25);--blue:#1E40AF;--blue-light:#3B82F6;--gold:#D4A744;--gold-light:#F0D078;--white:#F8FAFC;--gray100:#E2E8F0;--gray300:#94A3B8;--gray500:#64748B;--gray700:#334155}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3','Segoe UI',sans-serif;background:var(--bg);color:var(--gray300);line-height:1.6;overflow-x:hidden}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-light)}
+.page{display:none}.page.active{display:block}
+.alert-bar{background:var(--red);padding:.45rem 1.5rem;font-size:.76rem;color:rgba(255,255,255,.9);text-align:center;font-weight:500}.alert-bar strong{color:#fff}
+.main-nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:1px solid transparent;transition:all .3s;padding:0 1.5rem}
+.main-nav.scrolled{background:rgba(11,15,25,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom-color:var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:64px}
+.nav-logo{display:flex;align-items:center;gap:.8rem;cursor:pointer}
+.logo-shield{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--card));border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--gold);clip-path:polygon(0 0,100% 0,100% 68%,50% 100%,0 68%)}
+.logo-text-main{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:.12em;color:#fff;text-transform:uppercase;line-height:1.1}
+.logo-text-sub{font-size:.62rem;color:var(--gold);letter-spacing:.04em}
+.nav-links{display:flex;gap:.3rem;align-items:center}
+.nav-link{background:transparent;color:var(--gray300);border:none;font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;padding:.5rem 1rem;border-radius:4px;cursor:pointer;transition:all .2s}
+.nav-link:hover,.nav-link.active{color:#fff;background:rgba(255,255,255,.08)}
+.mobile-toggle{display:none;background:none;border:1px solid var(--border-light);color:#fff;padding:.4rem .8rem;border-radius:4px;font-size:1.1rem;cursor:pointer}
+.mobile-menu{display:none;padding:1rem 0 1.5rem;border-top:1px solid var(--border);flex-direction:column;gap:.3rem}.mobile-menu.open{display:flex}
+@media(max-width:768px){.nav-links{display:none!important}.mobile-toggle{display:block!important}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;border:none;border-radius:6px;cursor:pointer;transition:all .25s cubic-bezier(.4,0,.2,1);text-decoration:none;white-space:nowrap;font-size:.88rem;padding:.7rem 1.8rem}
+.btn-lg{font-size:1.05rem;padding:1rem 2.4rem}.btn-sm{font-size:.78rem;padding:.5rem 1.2rem}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 4px 20px var(--red-glow)}.btn-primary:hover{background:#EF4444;color:#fff;transform:translateY(-2px);box-shadow:0 6px 25px var(--red-glow)}
+.btn-secondary{background:transparent;color:var(--gray100);border:1.5px solid var(--border-light)}.btn-secondary:hover{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.3)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#C9993A);color:var(--bg)}.btn-gold:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(212,167,68,.35);color:var(--bg)}
+.section-tag{font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--red);margin-bottom:.6rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;color:var(--white);line-height:1.15;margin:0}
+.section-subtitle{font-size:1rem;color:var(--gray300);margin-top:.8rem;max-width:550px;line-height:1.7}
+.hero{position:relative;min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 4rem;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 20%,rgba(30,64,175,.2) 0%,transparent 55%),radial-gradient(ellipse at 75% 80%,rgba(220,38,38,.08) 0%,transparent 50%),linear-gradient(180deg,var(--bg) 0%,#0D1220 100%)}
+.hero-scan{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 1px,rgba(255,255,255,.015) 1px,rgba(255,255,255,.015) 2px);opacity:.5}
+.hero-glow{position:absolute;top:10%;right:8%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(220,38,38,.06) 0%,transparent 70%);filter:blur(40px)}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero-badge{display:inline-block;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.3);border-radius:20px;padding:.35rem 1.2rem;margin-bottom:1.8rem;font-family:'Barlow Condensed',sans-serif;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--red)}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:900;color:#fff;line-height:1.08;margin:0 0 1.5rem;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.hero p{font-size:1.15rem;color:var(--gray300);max-width:560px;margin:0 auto 2.5rem;line-height:1.75}
+.hero-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.stats-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 1.5rem}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:2rem;text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray500);margin-top:.4rem}
+.source-banner{max-width:900px;margin:0 auto;background:linear-gradient(135deg,rgba(30,64,175,.08),rgba(220,38,38,.05));border:1px solid var(--border-light);border-radius:12px;padding:2rem 2.5rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.source-banner h3{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.3rem}
+.mission-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.mission-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:2rem;border-left:3px solid var(--red);opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s}
+.mission-card.visible{opacity:1;transform:translateY(0)}
+.mission-card:nth-child(2){transition-delay:.1s}.mission-card:nth-child(3){transition-delay:.2s}.mission-card:nth-child(4){transition-delay:.3s}
+.mission-icon{font-size:2rem;margin-bottom:1rem}
+.mission-card h4{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.7rem}
+.cta-section{padding:5rem 1.5rem;background:linear-gradient(135deg,var(--blue) 0%,var(--surface) 100%);text-align:center}
+.cta-section h3{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:#fff;margin-bottom:1rem}
+.cta-section p{font-size:1.05rem;color:rgba(255,255,255,.7);margin-bottom:2rem;line-height:1.7}
+.donate-section{padding:5rem 1.5rem;text-align:center;border-top:1px solid var(--border)}
+.donate-note{font-size:.78rem;color:var(--gray700);margin-top:1rem;font-style:italic}
+.page-hero{background:linear-gradient(180deg,var(--surface),var(--bg));padding:5rem 1.5rem 3rem;text-align:center;border-bottom:1px solid var(--border)}
+.about-content{max-width:780px;margin:0 auto;padding:4rem 1.5rem}
+.about-block{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.about-block:last-child{border-bottom:none}
+.about-block h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--red);margin-bottom:1rem}
+.about-block p{font-size:.95rem;line-height:1.85}
+.about-item{display:flex;gap:.8rem;align-items:flex-start;margin-top:.6rem}
+.about-item span{color:var(--red);font-weight:700;flex-shrink:0;margin-top:.15rem}
+.about-item p{font-size:.95rem;line-height:1.7}
+.wall-source-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(30,64,175,.1);border:1px solid rgba(30,64,175,.2);border-radius:8px;padding:.6rem 1.5rem;font-size:.82rem;color:var(--gray300)}
+.wall-filter{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:.55rem 1.3rem;border-radius:6px}
+.wall-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem;max-width:1100px;margin:0 auto}
+.wall-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;border-top:3px solid var(--red);transition:transform .3s,box-shadow .3s}
+.wall-card:hover{transform:translateY(-4px);box-shadow:0 10px 35px rgba(220,38,38,.15)}
+.wall-photo{height:220px;background:var(--surface);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wall-photo img{width:100%;height:100%;object-fit:cover}
+.wall-photo-placeholder{font-size:4rem;color:rgba(255,255,255,.06);font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.wall-info{padding:1.2rem}
+.wall-status{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;border-radius:3px;margin-bottom:.6rem}
+.wall-info h4{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:600;color:#fff;letter-spacing:.04em;margin-bottom:.3rem}
+.wall-location{font-size:.82rem;color:var(--gray500);margin-bottom:.3rem}
+.wall-detail{font-size:.82rem;color:var(--gray300);line-height:1.5}
+.wall-registry-link{display:inline-block;margin-top:.8rem;font-size:.78rem;color:var(--blue-light);font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.wall-empty{text-align:center;padding:4rem 2rem;background:var(--card);border-radius:10px;border:1px solid var(--border)}
+.wall-cta{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:2rem;text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
+.wall-cta h4{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:.6rem}
+.wall-cta p{font-size:.88rem;margin-bottom:1.2rem;line-height:1.6}
+.submit-card{max-width:600px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:16px;border-top:3px solid var(--red);padding:3.5rem 2.5rem;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.3)}
+.ig-icon{width:80px;height:80px;margin:0 auto 2rem;border-radius:20px;background:linear-gradient(135deg,#833AB4,#E1306C,#F77737);display:flex;align-items:center;justify-content:center}
+.submit-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:1rem;line-height:1.3}
+.submit-card h3 span{color:var(--blue-light)}
+.submit-privacy{margin-top:2rem;padding:1rem;background:rgba(220,38,38,.06);border:1px solid rgba(220,38,38,.15);border-radius:8px;font-size:.82rem;color:var(--gray500)}
+.main-footer{background:#060A12;border-top:3px solid var(--red);padding:3.5rem 1.5rem 1.5rem}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:.1em;color:#fff}
+.footer-col-title{font-family:'Barlow Condensed',sans-serif;font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--red);margin-bottom:.8rem;font-weight:600}
+.footer-link{display:block;color:var(--gray500);font-size:.85rem;margin-bottom:.4rem;background:none;border:none;padding:0;cursor:pointer;font-family:inherit;text-align:left}
+.footer-link:hover{color:#fff}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);text-align:center;font-size:.73rem;color:var(--gray700)}
+</style>
+</head>
+<body>
+<div class="alert-bar">If a child is in immediate danger, call <strong>911</strong>. Childhelp Hotline: <strong>1-800-422-4453</strong></div>
+<nav class="main-nav" id="mainNav"><div class="nav-inner"><div class="nav-logo" onclick="showPage('home')"><div class="logo-shield">✡</div><div><div class="logo-text-main">The Jewish Guardians</div><div class="logo-text-sub">אנחנו נמצא אותך — We Will Find You</div></div></div><div class="nav-links"><button class="nav-link active" data-page="home" onclick="showPage('home')">Home</button><button class="nav-link" data-page="about" onclick="showPage('about')">About</button><button class="nav-link" data-page="wall" onclick="showPage('wall')">Wall of Shame</button><button class="nav-link" data-page="submit" onclick="showPage('submit')">Report</button><a href="https://instagram.com/thejewishguardians" target="_blank" class="btn btn-primary btn-sm" style="margin-left:.5rem">Report Abuse</a></div><button class="mobile-toggle" onclick="toggleMobile()">☰</button></div><div class="mobile-menu" id="mobileMenu"><button class="nav-link active" data-page="home" onclick="showPage('home')">Home</button><button class="nav-link" data-page="about" onclick="showPage('about')">About</button><button class="nav-link" data-page="wall" onclick="showPage('wall')">Wall of Shame</button><button class="nav-link" data-page="submit" onclick="showPage('submit')">Report</button></div></nav>
+
+<div class="page active" id="page-home">
+<section class="hero"><div class="hero-bg"></div><div class="hero-scan"></div><div class="hero-glow"></div><div class="hero-content"><div class="hero-badge">Protecting Our Children</div><h1>No Predator<br>Hides Forever.</h1><p>The Jewish Guardians publicly exposes registered sex offenders from <strong style="color:var(--gray100)">government-verified sources</strong> who operate within Jewish communities.</p><div class="hero-actions"><button class="btn btn-primary btn-lg" onclick="showPage('wall')">View Wall of Shame</button><a href="https://instagram.com/thejewishguardians" target="_blank" class="btn btn-secondary btn-lg">Report Abuse</a></div></div></section>
+
+<!-- ═══ EDIT STATS: Change data-target numbers ═══ -->
+<section class="stats-bar" id="statsBar"><div class="stats-grid"><div><div class="stat-num" data-target="47">0</div><div class="stat-label">Cases Investigated</div></div><div><div class="stat-num" data-target="23">0</div><div class="stat-label">Predators Exposed</div></div><div><div class="stat-num" data-target="89">0</div><div class="stat-label">Survivors Supported</div></div></div></section>
+
+<section style="padding:3rem 1.5rem;background:var(--bg)"><div class="source-banner"><div style="font-size:2.5rem">🏛️</div><div style="flex:1;min-width:250px"><h3>Government-Verified Sources Only</h3><p style="font-size:.92rem;line-height:1.6">Every individual listed on our Wall of Shame is sourced from official sex offender registries, court records, and public arrest reports.</p></div></div></section>
+
+<section style="padding:5rem 1.5rem;background:var(--bg)"><div style="max-width:1100px;margin:0 auto"><div style="text-align:center;margin-bottom:3rem"><div class="section-tag">What We Do</div><h2 class="section-title">Our Mission</h2></div><div class="mission-grid"><div class="mission-card"><div class="mission-icon">🛡️</div><h4>Protect</h4><p>We warn Jewish communities about registered sex offenders operating in their neighborhoods, shuls, and schools.</p></div><div class="mission-card"><div class="mission-icon">🔍</div><h4>Expose</h4><p>We aggregate publicly available registry data and present it in a clear, accessible format for community awareness.</p></div><div class="mission-card"><div class="mission-icon">🤝</div><h4>Support</h4><p>We connect survivors with therapy, legal resources, and advocacy organizations that understand their needs.</p></div><div class="mission-card"><div class="mission-icon">📢</div><h4>Educate</h4><p>We teach parents and educators how to recognize grooming, set boundaries, and create safe environments for children.</p></div></div></div></section>
+
+<section class="cta-section"><div style="max-width:600px;margin:0 auto"><h3>See Something? Say Something.</h3><p>If you know of a registered sex offender operating in a Jewish community, DM us on Instagram.</p><a href="https://instagram.com/thejewishguardians" target="_blank" class="btn btn-primary btn-lg">DM @thejewishguardians →</a></div></section>
+
+<section class="donate-section" style="background:var(--bg)"><div style="max-width:550px;margin:0 auto"><div class="section-tag">Support Us</div><h2 class="section-title" style="margin-bottom:.8rem">Help Us Protect Children</h2><p class="section-subtitle" style="margin:0 auto 2rem;max-width:550px">Your donation funds research, survivor support, and community education.</p><a href="https://paypal.me/YOURPAYPALHERE" target="_blank" class="btn btn-gold btn-lg">♥ Donate via PayPal</a><p class="donate-note">100% of donations go toward investigations, survivor support, and community education.</p></div></section>
+</div>
+
+<div class="page" id="page-about"><div class="page-hero"><div class="section-tag">About</div><h2 class="section-title">Who We Are</h2><p class="section-subtitle" style="margin:.8rem auto 0">Our mission, sources, and commitment to verified information.</p></div><div class="about-content"><div class="about-block"><h3>Who We Are</h3><p>The Jewish Guardians is an independent watchdog organization dedicated to community safety within Jewish communities. We aggregate information from government-verified sex offender registries and public court records to warn communities about convicted predators operating in their midst.</p></div><div class="about-block"><h3>Our Sources</h3><p>Every individual listed on our Wall of Shame is sourced exclusively from official, government-verified databases. These include the National Sex Offender Public Website (NSOPW), state-level sex offender registries, public court records, and law enforcement arrest reports. We do not publish unverified allegations or unsubstantiated claims.</p></div><div class="about-block"><h3>Why This Matters</h3><p>In tight-knit communities, predators exploit trust, institutional loyalty, and cultural taboos around discussing abuse. Many registered sex offenders relocate or embed themselves in communities where their status is unknown. We bridge that information gap — making publicly available registry data accessible and contextualized for Jewish communities.</p></div><div class="about-block"><h3>Our Process</h3><div class="about-item"><span>→</span><p>We identify registered sex offenders who are active members of, or operate within, Jewish communities.</p></div><div class="about-item"><span>→</span><p>We cross-reference their status against official government registries and court records.</p></div><div class="about-item"><span>→</span><p>We verify current location, community affiliation, and any relevant institutional connections.</p></div><div class="about-item"><span>→</span><p>Only individuals confirmed through government-verified sources are listed on our Wall of Shame.</p></div></div><div class="about-block" style="border-bottom:none"><h3>Legal Disclaimer</h3><p>All information published on this website is sourced from publicly available government records, including sex offender registries, court filings, and arrest reports. The Jewish Guardians does not operate as a court of law. We strongly encourage all victims to report abuse directly to law enforcement. If a child is in immediate danger, call 911.</p></div></div></div>
+
+<div class="page" id="page-wall"><div class="page-hero"><div class="section-tag">Wall of Shame</div><h2 class="section-title" id="wallTitle">Registered Sex Offenders Exposed</h2><p class="section-subtitle" style="margin:.8rem auto 0;max-width:600px">All individuals listed below are sourced from government-verified sex offender registries and public court records.</p></div><section style="padding:3rem 1.5rem;background:var(--bg)"><div style="max-width:1100px;margin:0 auto"><div style="text-align:center;margin-bottom:2rem"><div class="wall-source-badge"><span>🏛️</span> Source: National Sex Offender Registry & Public Court Records</div></div><div style="text-align:center;margin-bottom:2.5rem"><div class="wall-filter">Registered</div></div><div id="wallGrid" class="wall-grid"></div><div class="wall-cta" style="margin-top:3rem"><h4>Know of a registered offender in your community?</h4><p>DM us on Instagram with their name and registry information.</p><a href="https://instagram.com/thejewishguardians" target="_blank" class="btn btn-primary">DM @thejewishguardians →</a></div></div></section></div>
+
+<div class="page" id="page-submit"><div class="page-hero"><div class="section-tag">Report</div><h2 class="section-title">Submit a Tip</h2></div><section style="padding:5rem 1.5rem;background:var(--bg)"><div class="submit-card"><div class="ig-icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div><h3>Please DM Our Instagram<br><span>@thejewishguardians</span><br>To Submit a Tip</h3><p style="font-size:.95rem;line-height:1.7;max-width:420px;margin:0 auto 2rem">All tips are reviewed confidentially. Include the individual's name, location, and a link to their sex offender registry page if possible.</p><a href="https://instagram.com/thejewishguardians" target="_blank" class="btn btn-primary btn-lg">Open Instagram →</a><div class="submit-privacy">🔒 Your identity will remain confidential. For emergencies, call <strong style="color:var(--gray300)">911</strong>.</div></div></section></div>
+
+<footer class="main-footer"><div class="footer-grid"><div><div class="footer-logo">✡ THE JEWISH GUARDIANS</div><div style="font-size:.85rem;color:var(--gold);margin-top:.4rem">אנחנו נמצא אותך</div><div style="font-size:.78rem;color:var(--gray500);margin-top:.2rem">Protecting Our Children</div></div><div><div class="footer-col-title">Pages</div><button class="footer-link" onclick="showPage('home')">Home</button><button class="footer-link" onclick="showPage('about')">About</button><button class="footer-link" onclick="showPage('wall')">Wall of Shame</button><button class="footer-link" onclick="showPage('submit')">Report</button></div><div><div class="footer-col-title">Resources</div><span class="footer-link">Emergency: 911</span><span class="footer-link">Childhelp: 1-800-422-4453</span><a href="https://www.rainn.org" target="_blank" class="footer-link">RAINN.org</a></div></div><div class="footer-bottom"><p>© 2026 The Jewish Guardians. All rights reserved.</p><p style="margin-top:.3rem">All listed individuals are sourced from government-verified sex offender registries and public court records.</p></div></footer>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════╗
+   ║  ADD PEOPLE HERE — Just add objects to this array       ║
+   ║                                                         ║
+   ║  {                                                      ║
+   ║    name: "Full Name",                                   ║
+   ║    location: "City, State",                             ║
+   ║    detail: "Conviction details or registry info",       ║
+   ║    photo: "https://url-to-photo.jpg",  (or "")          ║
+   ║    registryLink: "https://registry-url",  (or "")       ║
+   ║  },                                                     ║
+   ╚══════════════════════════════════════════════════════════╝ */
+var WALL_ENTRIES = [
+  // Uncomment below to test, then replace with real data:
+  // { name: "John Doe", location: "Brooklyn, NY", detail: "Convicted 2019 — Sexual abuse of a minor", photo: "", registryLink: "https://www.nsopw.gov" },
+];
+
+function showPage(id){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});document.getElementById('page-'+id).classList.add('active');document.querySelectorAll('.nav-link').forEach(function(l){l.classList.toggle('active',l.dataset.page===id)});document.getElementById('mobileMenu').classList.remove('open');window.scrollTo(0,0);if(id==='wall')renderWall();if(id==='home')observeMissionCards()}
+function toggleMobile(){document.getElementById('mobileMenu').classList.toggle('open')}
+window.addEventListener('scroll',function(){document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>40)});
+
+var statsAnimated=false;
+var statsObs=new IntersectionObserver(function(entries){if(entries[0].isIntersecting&&!statsAnimated){statsAnimated=true;document.querySelectorAll('.stat-num').forEach(function(el){var target=parseInt(el.dataset.target);var dur=1200;var start=performance.now();function tick(now){var t=Math.min((now-start)/dur,1);var ease=1-Math.pow(1-t,3);el.textContent=Math.floor(target*ease);if(t<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)})}},{threshold:0.3});
+statsObs.observe(document.getElementById('statsBar'));
+
+function observeMissionCards(){var cards=document.querySelectorAll('.mission-card');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.15});cards.forEach(function(c){obs.observe(c)})}
+observeMissionCards();
+
+function renderWall(){var grid=document.getElementById('wallGrid');var title=document.getElementById('wallTitle');var count=WALL_ENTRIES.length;title.textContent=count>0?count+' Registered Sex Offender'+(count!==1?'s':'')+' Exposed':'Registered Sex Offenders Exposed';if(count===0){grid.innerHTML='<div class="wall-empty"><div style="font-size:3rem;margin-bottom:1rem;opacity:.3">🔍</div><h3 style="font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:.5rem">Entries Coming Soon</h3><p style="font-size:.9rem;color:var(--gray500);max-width:400px;margin:0 auto">We are currently compiling verified entries from official sex offender registries. Check back soon.</p></div>';return}grid.innerHTML=WALL_ENTRIES.map(function(e){return'<div class="wall-card"><div class="wall-photo">'+(e.photo?'<img src="'+e.photo+'" alt="'+e.name+'">':'<span class="wall-photo-placeholder">?</span>')+'</div><div class="wall-info"><span class="wall-status">Registered</span><h4>'+e.name+'</h4>'+(e.location?'<p class="wall-location">📍 '+e.location+'</p>':'')+'<p class="wall-detail">'+e.detail+'</p>'+(e.registryLink?'<a href="'+e.registryLink+'" target="_blank" class="wall-registry-link">View Registry Record →</a>':'')+'</div></div>'}).join('')}
+</script>
+</body>
+</html>
